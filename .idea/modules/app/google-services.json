@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "817598385210",
+    "firebase_url": "https://futworld-6bc7f.firebaseio.com",
+    "project_id": "futworld-6bc7f",
+    "storage_bucket": "futworld-6bc7f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817598385210:android:7cbb1c48e4e3882a903903",
+        "android_client_info": {
+          "package_name": "com.example.futworld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "817598385210-7pm8g2fe9l7efn5lp1h59btph77jl44o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.futworld",
+            "certificate_hash": "a219af0cf9a2f9a4088fe68b3f653f1ae2201a02"
+          }
+        },
+        {
+          "client_id": "817598385210-mqd1qj8v5osurss4gao15mb88qki367f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaXGql6Xu9q8UuwyY68FQf9tFbF5iDkk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "817598385210-mqd1qj8v5osurss4gao15mb88qki367f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
