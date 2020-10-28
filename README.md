@@ -15,11 +15,12 @@
   
  - main page
   // TODO: display the tournament list
+  create the recycler view to display the tournaments
   - navigation page
     - header
       1. profile photo
       2. user name
-    - menu
+    - menu (with icons)
       1. personal information
       2. create tournament
       3. edit tournament
