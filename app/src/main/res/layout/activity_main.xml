@@ -7,21 +7,31 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context=".view.MainActivity" android:background="@color/bgGray">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello Administrator!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/mainToolbar">
+            <TextView
+                android:text="@string/app_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" 
+                android:id="@+id/textView"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="center" android:textSize="30sp"
+                android:textStyle="bold" android:layout_marginLeft="40dp" android:layout_marginTop="5dp"
+                android:gravity="center_horizontal" />
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_marginTop="?attr/actionBarSize"
+            android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="16dp"
+            android:paddingTop="30dp" android:id="@+id/mainRecycler"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
     
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navView"

@@ -3,21 +3,26 @@
 
     <item
         android:id="@+id/personalInfo"
-        android:title="Personal Info" />
+        android:icon="@drawable/personal_info_icon"
+        android:title="Personal Information" />
 
     <item
-        android:id="@+id/createTournament"
-        android:title="Create Tournament" />
+        android:id="@+id/tournament"
+        android:icon="@drawable/tournament_icon"
+        android:title="Tournaments" />
 
     <item
-        android:id="@+id/editTournament"
-        android:title="Edit Tournament" />
+        android:id="@+id/club"
+        android:icon="@drawable/club_icon"
+        android:title="Clubs" />
 
     <item
-        android:id="@+id/updateTournament"
-        android:title="Update Stats" />
+        android:id="@+id/player"
+        android:icon="@drawable/player_icon"
+        android:title="Players" />
 
     <item
         android:id="@+id/logoutOption"
+        android:icon="@drawable/logout_icon"
         android:title="Logout" />
 </menu>

@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
@@ -33,6 +34,9 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var userId: String
 
+    lateinit var arrayList: ArrayList<League>
+    lateinit var myAdapter: MainRecyclerAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -50,9 +54,9 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(applicationContext, "Personal Information", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, PersonalInformationActivity::class.java))
                 }
-                R.id.createTournament -> Toast.makeText(applicationContext, "Create", Toast.LENGTH_SHORT).show()
-                R.id.editTournament -> Toast.makeText(applicationContext, "Edit", Toast.LENGTH_SHORT).show()
-                R.id.updateTournament -> Toast.makeText(applicationContext, "Update", Toast.LENGTH_SHORT).show()
+                R.id.tournament -> Toast.makeText(applicationContext, "Tournament", Toast.LENGTH_SHORT).show()
+                R.id.club -> Toast.makeText(applicationContext, "Club", Toast.LENGTH_SHORT).show()
+                R.id.player -> Toast.makeText(applicationContext, "Player", Toast.LENGTH_SHORT).show()
                 R.id.logoutOption -> {
                     FirebaseAuth.getInstance().signOut()
                     startActivity(Intent(this, Login::class.java))
@@ -86,6 +90,22 @@ class MainActivity : AppCompatActivity() {
                 userName.setText(snapshots.getString("userName"))
             }
         }
+
+        // Load the league information
+        arrayList = ArrayList<League>()
+        arrayList.add(
+            League("0", "Tournament A", "0")
+        )
+        arrayList.add(
+            League("1", "Tournament B", "1")
+        )
+        arrayList.add(
+            League("2", "Tournament C", "2")
+        )
+
+        myAdapter = MainRecyclerAdapter(this,arrayList)
+        mainRecycler.layoutManager = LinearLayoutManager(this)
+        mainRecycler.adapter = myAdapter
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
