@@ -1,31 +1,35 @@
 # FinalProject
-signup page email / user name / password / user type
 
-go to the main page according to the user type
-switch to the login page
-check whether the user logged in or not, if so, skip the sign up page.
-check the input information's validity
-information stored in firebase
-login page
-
-check the information
-go to main page according to the user type
-switch to the sign up page
-main page // TODO: display the tournament list create the recycler view to display the tournaments
-
-navigation page
-
-header
-profile photo
-user name
-menu (with icons)
-personal information
-create tournament
-edit tournament
-update stats
-logout
-personal information page
-
-change the profile photo
-change the information
-update in the firebase
+- signup page
+  email / user name / password / user type
+  1. go to the main page according to the user type
+  2. switch to the login page
+  3. check whether the user logged in or not, if so, skip the sign up page.
+  4. check the input information's validity
+  5. information stored in firebase
+ 
+ - login page
+  1. check the information
+  2. go to main page according to the user type
+  3. switch to the sign up page
+  
+ - main page
+  // TODO: display the tournament list
+  create the recycler view to display the tournaments
+  - navigation page
+    - header
+      1. profile photo
+      2. user name
+    - menu (with icons)
+      1. personal information
+      2. create tournament
+      3. edit tournament
+      4. update stats
+      5. logout
+  
+  - personal information page
+    1. change the profile photo
+    2. change the information
+    3. update in the firebase
+  
+  
