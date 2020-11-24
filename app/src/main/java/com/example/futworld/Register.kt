@@ -13,6 +13,8 @@ import com.google.android.gms.tasks.OnSuccessListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
@@ -141,10 +143,27 @@ class Register : AppCompatActivity() {
                         Log.d("Fail", "onFailure: " + it.toString())
                     }
 
+
+                    // store the player information in the firebase database for players
+                    if(userType == "Player"){
+                        val database: FirebaseDatabase = FirebaseDatabase.getInstance()
+                        val playerRef: DatabaseReference = database.getReference("players")
+
+                        val id = playerRef.push().key.toString()
+                        val newPlayer = Player(id, str_userName, "N/A", "0", "18", "N/A", "N/A", "N/A")
+
+                        playerRef.child(id).setValue(newPlayer).addOnCompleteListener {
+                            Toast.makeText(this, "Player profile has been saved.", Toast.LENGTH_SHORT).show()
+                        }
+
+                    }
+
+
+
                     when(userTypes.checkedRadioButtonId){
                         R.id.administrator -> startActivity(Intent(this, MainActivity::class.java))
-                        R.id.clubManager -> startActivity(Intent(this, ClubManagerActivity::class.java))
-                        R.id.player -> startActivity(Intent(this, PlayerActivity::class.java))
+                        R.id.clubManager -> startActivity(Intent(this, MainActivity::class.java))
+                        R.id.player -> startActivity(Intent(this, MainActivity::class.java))
                     }
                 }
                 else{

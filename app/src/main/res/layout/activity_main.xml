@@ -7,32 +7,55 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".view.MainActivity" android:background="@color/bgGray">
+<!--    <androidx.coordinatorlayout.widget.CoordinatorLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@color/bgGray">-->
 
-        <androidx.appcompat.widget.Toolbar
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/mainToolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginLeft="40dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:fontFamily="@font/bungee_inline"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:text="@string/app_name"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                android:textSize="30sp"-->
+<!--                android:textStyle="bold" />-->
+<!--        </androidx.appcompat.widget.Toolbar>-->
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:id="@+id/mainToolbar">
-            <TextView
-                android:text="@string/app_name"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" 
-                android:id="@+id/textView"
-                android:textColor="@color/colorPrimary"
-                android:textAlignment="center" android:textSize="30sp"
-                android:textStyle="bold" android:layout_marginLeft="40dp" android:layout_marginTop="5dp"
-                android:gravity="center_horizontal" />
-        </androidx.appcompat.widget.Toolbar>
+            android:layout_height="match_parent"
+            android:id="@+id/container">
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent" android:layout_marginTop="?attr/actionBarSize"
             android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="16dp"
             android:paddingTop="30dp" android:id="@+id/mainRecycler"/>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-    
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/create_tournament_btn"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            app:fabSize="normal"
+            android:backgroundTint="@color/colorPrimary"
+            android:elevation="6dp"
+            android:src="@drawable/ic_baseline_add_circle_outline_24"
+            />
+        </FrameLayout>
+<!--    </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
+<!--    -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navView"
         android:layout_width="wrap_content"
@@ -42,5 +65,8 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         tools:ignore="InvalidId" />
+
+
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

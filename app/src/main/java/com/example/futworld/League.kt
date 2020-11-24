@@ -2,6 +2,11 @@ package com.example.futworld
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
+import com.example.futworld.Club
 
-@Parcelize
-data class League(val id: String, val name: String, val badge: String): Parcelable
+data class League(
+    val createrId :String = "",
+    val title: String = "",
+    val badge: String = "",
+    val size: Int = 0
+)

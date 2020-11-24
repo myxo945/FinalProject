@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:civ_border_color="#FFFFFF"
+    android:layout_margin="8dp"
+    android:padding="8dp"
+    app:civ_border_width="2dp"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/playerPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:background="@color/colorPrimaryDark"
+            android:contentDescription="@string/player_profile"
+            android:padding="8dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/playerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/playerPhoto"
+            android:fontFamily="@font/bungee_inline"
+            android:padding="2dp"
+            android:text="Name: "
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/playerAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/playerName"
+            android:layout_toRightOf="@+id/playerPhoto"
+            android:fontFamily="@font/bungee_inline"
+            android:padding="2dp"
+            android:text="Age: "
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/playerNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/playerAge"
+            android:layout_toRightOf="@+id/playerPhoto"
+            android:fontFamily="@font/bungee_inline"
+            android:padding="2dp"
+            android:text="Number: "
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/playerPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/playerNumber"
+            android:layout_toRightOf="@+id/playerPhoto"
+            android:fontFamily="@font/bungee_inline"
+            android:padding="2dp"
+            android:text="Club: "
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

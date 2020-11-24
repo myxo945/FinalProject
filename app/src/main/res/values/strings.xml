@@ -4,5 +4,8 @@
     <string name="login">Login</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
-    <string name="league_fan_art"/>
+    <string name="league_fan_art" />
+    <string name="player_profile">Handsome player</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

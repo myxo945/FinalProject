@@ -92,8 +92,8 @@ class Login : AppCompatActivity() {
             Toast.makeText(this, "Logged in successfully.", Toast.LENGTH_SHORT).show()
             when(userTypes.checkedRadioButtonId){
                 R.id.administrator -> startActivity(Intent(this, MainActivity::class.java))
-                R.id.clubManager -> startActivity(Intent(this, ClubManagerActivity::class.java))
-                R.id.player -> startActivity(Intent(this, PlayerActivity::class.java))
+                R.id.clubManager -> startActivity(Intent(this, MainActivity::class.java))
+                R.id.player -> startActivity(Intent(this, MainActivity::class.java))
             }
         }
         else{

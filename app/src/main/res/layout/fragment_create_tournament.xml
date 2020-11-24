@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/createTournamentPage"
+    android:layout_width="350dp"
+    android:layout_height="527dp"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:layout_margin="16dp"
+    android:background="#FFFFFF"
+    tools:context=".CreateTournamentFragment">
+
+        <TextView
+            android:id="@+id/tournamentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Tournament Name"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/tournamentTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tournamentName"
+            android:layout_margin="16dp"
+            android:ems="10"
+            android:hint="Title"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tournamentTitle"
+            android:layout_margin="16dp"
+            android:layout_marginTop="0dp"
+            android:text="Create Tournament" />
+
+</RelativeLayout>

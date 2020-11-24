@@ -44,7 +44,7 @@ class PersonalInformationActivity : AppCompatActivity() {
 
         fAuth = FirebaseAuth.getInstance()
         fStore = FirebaseFirestore.getInstance()
-        storageReference = FirebaseStorage.getInstance().getReference()
+        storageReference = FirebaseStorage.getInstance().reference
 
         var profileRef: StorageReference = storageReference.child("users/" + fAuth.currentUser!!.uid + "/profile.jpg")
         profileRef.downloadUrl.addOnSuccessListener {
